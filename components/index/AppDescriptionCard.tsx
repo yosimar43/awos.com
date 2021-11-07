@@ -1,19 +1,11 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 
 interface Props {
  description: string;
  title: string;
- src: string;
- alt: string;
 }
 
-const AppDesccriptionCard: NextPage<Props> = ({
- title,
- description,
- src,
- alt,
-}) => {
+const AppDesccriptionCard: NextPage<Props> = ({ title, description }) => {
  return (
   <div className="card">
    <h2>{title}</h2>
