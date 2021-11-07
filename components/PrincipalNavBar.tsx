@@ -6,13 +6,13 @@ const PrincipalNavBar: NextPage = () => {
   <>
    <nav>
     <Link href="/">
-     <a className={`link`}>blog</a>
+     <a>blog</a>
     </Link>
     <Link href="/">
-     <a className={`link`}>AWOS</a>
+     <a>AWOS</a>
     </Link>
     <Link href="/">
-     <a className={`link`}>guias</a>
+     <a>guias</a>
     </Link>
    </nav>
    <style jsx>
@@ -29,18 +29,18 @@ const PrincipalNavBar: NextPage = () => {
        0 10px 10px -5px rgba(0, 0, 0, 0.04);
      }
 
-     .link {
+     a {
       position: relative;
       text-decoration: none;
       color: #1d1c1c;
-      transition: color 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       overflow: hidden;
      }
-     .link:hover {
+     a:hover {
       transform: translateY(-3px);
       color: #e71135;
      }
-     .link:before {
+     a:before {
       content: "";
       position: absolute;
       bottom: 0px;
@@ -50,7 +50,7 @@ const PrincipalNavBar: NextPage = () => {
       background-color: #e71135;
       transition: all 1s ease-in-out;
      }
-     .link:hover:before {
+     a:hover:before {
       transform: translateX(0%);
      }
     `}
