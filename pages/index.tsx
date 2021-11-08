@@ -5,8 +5,19 @@ import PrincipalNavBar from "@/helpers/PrincipalNavBar";
 import AppPretySentence from "@/helpers/index/AppPretySentence";
 import AppDesccriptionCard from "@/helpers/index/AppDescriptionCard";
 import { Col, Row } from "antd";
+import useHiddenMenuScroll from "@hooks/useHiddenMenuScroll";
 
 const Home: NextPage = () => {
+ const hiddenClassName = `
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+`;
+
+ const showClassName = `
+    transform: translateY(0%);
+    transition: transform 0.5s;
+`;
+
  return (
   <div>
    <Head>
@@ -18,6 +29,17 @@ const Home: NextPage = () => {
    <header>
     <PrincipalNavBar />
    </header>
+   <style jsx>{`
+    header {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: auto;
+     z-index: 3;
+     background-color: #fff;
+     ${useHiddenMenuScroll(showClassName, hiddenClassName)}
+    }
+   `}</style>
    <main>
     <AppPretySentence
      specialSentence="AWOS.COM"
