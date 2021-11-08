@@ -11,7 +11,7 @@ const AppDesccriptionCard: NextPage<Props> = ({ title, description }) => {
    <h2>{title}</h2>
    <p>{description}</p>
    <style jsx>{`
-    div.card {
+    div {
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -26,6 +26,7 @@ const AppDesccriptionCard: NextPage<Props> = ({ title, description }) => {
      border-radius: 10px;
      border: 1px solid rgba(255, 255, 255, 0.18);
      border-radius: 0.5rem;
+     text-align: center;
     }
     h2 {
      font-size: 2rem;
